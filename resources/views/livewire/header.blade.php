@@ -1,4 +1,4 @@
-<div class="flex justify-between w-full">
+<div class="flex justify-between mb-8 w-full">
     <div class="flex items-center gap-2">
         <x-ri-github-fill class="w-8" /> <span class="font-bold text-xl">Issue Tracker</span>
     </div>
