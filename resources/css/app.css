@@ -45,6 +45,12 @@
     ::file-selector-button {
         border-color: var(--color-gray-200, currentColor);
     }
+
+    html,
+    body {
+        background: linear-gradient(to bottom right, #ffffff, #f6f8fa);
+        height: 100%;
+    }
 }
 
 [data-flux-field] {
