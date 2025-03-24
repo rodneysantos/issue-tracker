@@ -52,4 +52,4 @@ Start the server
   composer run dev
 ```
 
-Open a browser and navigate to `http://localhost`.
+Open a browser and navigate to `[http://localhost:8000](http://localhost:8000/)`.
