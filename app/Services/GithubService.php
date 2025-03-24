@@ -23,10 +23,17 @@ class GithubService implements CodeRepository
         $this->headers['Authorization'] = 'Bearer ' . config('services.github.access_token');
     }
 
-
-    public function getIssues()
+    public function getOpenIssues()
     {
-        $response = Http::withHeaders($this->headers)->get(config('services.github.url') . "/issues");
+        $url = config('services.github.url') . "/issues?state=open";
+        $response = Http::withHeaders($this->headers)->get($url);
+        return $response->json();
+    }
+
+    public function getIssue($name, $issueNumber)
+    {
+        $url = config('services.github.url') . "/repos/$name/issues/$issueNumber";
+        $response = Http::withHeaders($this->headers)->get($url);
         return $response->json();
     }
 }
